@@ -1,0 +1,6 @@
+com\nagp\assignment\nagp\repository\ProjectRepository.class
+com\nagp\assignment\nagp\entity\Project$ProjectBuilder.class
+com\nagp\assignment\nagp\NagpApplication.class
+com\nagp\assignment\nagp\controller\NagpController.class
+com\nagp\assignment\nagp\entity\Project.class
+com\nagp\assignment\nagp\service\ProjectService.class
