@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: spring-web-config
+data:
+  DB_URL: jdbc:mysql://mysql.default.svc.cluster.local:3306/nagp_assignment
+  DB_USER: root

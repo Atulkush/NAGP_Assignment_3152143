@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deployment
+spec:
+  replicas: 4
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: web-service
+  template:
+    metadata:
+      labels:
+        app: web-service
+    spec:
+      containers:
+        - name: webapp
+          image: atulkushwaha/spring-web-nagp:4.0
+          imagePullPolicy: IfNotPresent
+          resources:
+            requests:
+              memory: 50Mi 
+              cpu: 50m
+            limits:
+                memory: 500Mi
+          ports:
+            - name: tpc
+              protocol: TCP
+              containerPort: 8080
+          env:
+            - name: MYSQL_URL
+              valueFrom: 
+               configMapKeyRef: 
+                key: DB_URL
+                name: spring-web-config
+            - name: MYSQl_USER
+              valueFrom: 
+               configMapKeyRef: 
+                key: DB_USER
+                name: spring-web-config
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom: 
+               secretKeyRef: 
+                key: DB_PASSWORD
+                name: mysqlsecret

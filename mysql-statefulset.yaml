@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mysql
+spec:
+  replicas: 1
+  serviceName: mysql
+  updateStrategy:
+    type: OnDelete
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+        - name: mysql
+          image: mysql:5.7
+          args: 
+            - "--ignore-db-dir=lost+found"
+          resources:
+            requests:
+              memory: 50Mi 
+              cpu: 50m
+            limits:
+                memory: 500Mi
+          ports:
+            - name: tpc
+              protocol: TCP
+              containerPort: 3306
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom: 
+               secretKeyRef: 
+                key: DB_PASSWORD
+                name: mysqlsecret
+          volumeMounts:
+            - name: mysql-claim
+              mountPath: /var/lib/mysql
+  volumeClaimTemplates:
+  - metadata:
+      name: mysql-claim
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: "mysql-gcp-class"
+      resources:
+        requests:
+          storage: 100Mi
