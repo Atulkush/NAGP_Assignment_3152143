@@ -4,7 +4,7 @@ Code Repository Link: https://github.com/Atulkush/NAGP_docker.git
 
 Docker Hub URL : https://hub.docker.com/r/atulkushwaha/spring-web-nagp/tags
 
-Docker Hub image used for Rest API: atulkushwaha/spring-web-nagp:4.0
+Docker Hub image used for Rest API: [atulkushwaha/spring-web-nagp:4.0] (https://hub.docker.com/layers/atulkushwaha/spring-web-nagp/4.0/images/sha256-36ef0ed0161fae64992af1380294c0fb37e8007245c5453591096d6c77ea2c89?context=explore)
 
 Docker Hub image pull command: docker pull atulkushwaha/spring-web-nagp:4.0
 
@@ -13,7 +13,7 @@ URL Service to Fetch Database Record: http://**EXTERNALIP**:8080/projects
 
 # Code Structure
 
-Web folder contains code related to Web service which includes dockerfile as well.
+[Web folder](https://github.com/Atulkush/NAGP_docker/tree/main/Web) contains code related to Web service which includes dockerfile as well.
 
 Rest [YAML files](https://github.com/Atulkush/NAGP_docker) are placed outside Web folder
 
