@@ -15,7 +15,7 @@ URL Service to Fetch Database Record: http://**EXTERNALIP**:8080/projects
 
 Web folder contains code related to Web service which includes dockerfile as well.
 
-Rest YAML files are placed outside Web folder
+Rest [YAML files](https://github.com/Atulkush/NAGP_docker) are placed outside Web folder
 
 Scripts used to create table & insert data is placed in file [SqlScripts.sql](https://raw.githubusercontent.com/Atulkush/NAGP_docker/main/SqlScripts.sql)
 
