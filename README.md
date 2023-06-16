@@ -17,7 +17,7 @@ Web folder contains code related to Web service which includes dockerfile as wel
 
 Rest YAML files are placed outside Web folder
 
-Scripts used to create table & insert data is placed in file SqlScripts.sql
+Scripts used to create table & insert data is placed in file [SqlScripts.sql](https://raw.githubusercontent.com/Atulkush/NAGP_docker/main/SqlScripts.sql)
 
 Database password is stored in Secret & Database configuration details are added in Config Map.
 
