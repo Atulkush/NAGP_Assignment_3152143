@@ -1,6 +1,6 @@
 # NAGP Assignment 
 
-Code Repository Link: https://github.com/Atulkush/NAGP_docker.git
+Code Repository Link: https://github.com/Atulkush/NAGP_Assignment_3152143.git
 
 Docker Hub URL : https://hub.docker.com/r/atulkushwaha/spring-web-nagp/tags
 
@@ -13,11 +13,11 @@ URL Service to Fetch Database Record: http://**EXTERNALIP**:8080/projects
 
 # Code Structure
 
-[Web folder](https://github.com/Atulkush/NAGP_docker/tree/main/Web) contains code related to Web service which includes dockerfile as well.
+[Web folder](https://github.com/Atulkush/NAGP_Assignment_3152143/tree/main/Web) contains code related to Web service which includes dockerfile as well.
 
-Rest [YAML files](https://github.com/Atulkush/NAGP_docker) are placed outside Web folder
+Rest [YAML files](https://github.com/Atulkush/NAGP_Assignment_3152143) are placed outside Web folder
 
-Scripts used to create table & insert data is placed in file [SqlScripts.sql](https://raw.githubusercontent.com/Atulkush/NAGP_docker/main/SqlScripts.sql)
+Scripts used to create table & insert data is placed in file [SqlScripts.sql](https://raw.githubusercontent.com/Atulkush/NAGP_Assignment_3152143/main/SqlScripts.sql)
 
 Database password is stored in Secret & Database configuration details are added in Config Map.
 
